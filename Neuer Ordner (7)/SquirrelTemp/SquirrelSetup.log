@@ -1,0 +1,71 @@
+﻿2020-08-27 12:57:54> Program: Starting Squirrel Updater: --install . --exeName=Teams_windows.exe
+2020-08-27 12:57:56> Program: setup.json does not exist
+2020-08-27 12:57:56> Program: Starting install, writing to C:\Users\schüler.EDU\AppData\Local\SquirrelTemp
+2020-08-27 12:57:56> Program: File does not contain contextual info: Teams_windows.exe
+2020-08-27 12:57:56> UpdateManager: using rootAppDirectory: C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams
+2020-08-27 12:57:56> Program: About to install to: C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams
+2020-08-27 12:57:56> Program: Setup.json exist, copying over
+2020-08-27 12:57:56> RegistryService: RegKeyExists: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run does not have TeamsMachineInstaller
+2020-08-27 12:57:56> Program: CheckMsiAndTryAddInstallSource: Not MSI, no need to add HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\InstallSource
+2020-08-27 12:57:56> CheckForUpdateImpl: Couldn't write out staging user ID, this user probably shouldn't get beta anything: System.IO.DirectoryNotFoundException: Ein Teil des Pfades "C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\packages\.betaId" konnte nicht gefunden werden.
+   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   bei System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   bei System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   bei System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   bei System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.getOrCreateStagedUserId()
+2020-08-27 12:57:56> CheckForUpdateImpl: Failed to load local releases, starting from scratch: System.IO.DirectoryNotFoundException: Ein Teil des Pfades "C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\packages\RELEASES" konnte nicht gefunden werden.
+   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   bei Squirrel.Utility.LoadLocalReleases(String localReleaseFile)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__3.MoveNext()
+2020-08-27 12:57:56> CheckForUpdateImpl: Reading RELEASES file from C:\Users\schüler.EDU\AppData\Local\SquirrelTemp
+2020-08-27 12:57:56> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+2020-08-27 12:57:57> ApplyReleasesImpl: No delta packages found. Applying current release package.
+2020-08-27 12:57:57> ApplyReleasesImpl: getting squirrel aware apps failed with exception Ein Teil des Pfades "C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\current" konnte nicht gefunden werden.
+2020-08-27 12:57:57> ApplyReleasesImpl: Writing files to app directory: C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\current
+2020-08-27 12:58:23> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\current\Teams.exe]
+2020-08-27 12:58:28> ApplyReleasesImpl: About to RemoveOldShorcuts for Teams.exe, rootAppDir C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams
+2020-08-27 12:58:28> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Policies\Microsoft\Cloud\Office\16.0\Teams does not exist
+2020-08-27 12:58:28> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Cloud\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2020-08-27 12:58:28> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Teams does not exist
+2020-08-27 12:58:28> ApplyReleasesImpl: Registry value Software\Policies\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2020-08-27 12:58:28> RegistryService: RegKeyExists: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Teams does not exist
+2020-08-27 12:58:28> ApplyReleasesImpl: Registry value Software\Microsoft\Office\16.0\Teams\PreventFirstLaunchAfterInstall does not exist
+2020-08-27 12:58:28> ApplyReleasesImpl: Registry flags are not set: proceed with default value NotConfigured
+2020-08-27 12:58:28> ApplyReleasesImpl: Starting fixPinnedExecutables
+2020-08-27 12:58:28> ApplyReleasesImpl: Examining Pin: Internet Explorer.lnk
+2020-08-27 12:58:28> ApplyReleasesImpl: Examining Pin: Mozilla Firefox.lnk
+2020-08-27 12:58:28> ApplyReleasesImpl: Examining Pin: Windows Explorer.lnk
+2020-08-27 12:58:28> ApplyReleasesImpl: Examining Pin: Windows Media Player.lnk
+2020-08-27 12:58:28> ApplyReleasesImpl: Fixing up tray icons
+2020-08-27 12:58:28> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2020-08-27 12:58:28> ApplyReleasesImpl: Couldn't rewrite shim RegKey, most likely no apps are shimmed: System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei Squirrel.UpdateManager.ApplyReleasesImpl.<unshimOurselves>b__24_0(RegistryView view)
+2020-08-27 12:58:28> MeetingAddinInstaller: System.ArgumentException: Eine Unterschlüsselstruktur kann nicht gelöscht werden, da der Unterschlüssel nicht vorhanden ist.
+   bei System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   bei Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey, Boolean throwOnMissingSubKey)
+   bei Microsoft.Win32.RegistryKey.DeleteSubKeyTree(String subkey)
+   bei Squirrel.MeetingAddinInstaller.<InstallMeetingAddinAsync>d__15.MoveNext()
+2020-08-27 12:58:28> MeetingAddinInstaller: StagedAppDirectory does not exist. Using Current
+2020-08-27 12:58:28> MeetingAddinInstaller: There is no version.txt. Falling back to getting version from folder name
+2020-08-27 12:58:28> MeetingAddinInstaller: Version: 1.0.20130.1; addinPackageDirectory: 1.0.20130.1
+2020-08-27 12:58:28> MeetingAddinInstaller: .dead exists: False
+2020-08-27 12:58:28> MeetingAddinInstaller: path to .dead: C:\Users\schüler.EDU\AppData\Local\Microsoft\TeamsMeetingAddin\1.0.20130.1\.dead
+2020-08-27 12:58:28> MeetingAddinInstaller: before cleanup unused versions
+2020-08-27 12:58:30> MeetingAddinInstaller: Version 1.0.20130.1 of the meeting add-in is now installed
+2020-08-27 12:58:30> PresenceAddinInstaller: Installing Teams Presence addin for Outlook...
+2020-08-27 12:58:30> PresenceAddinInstaller: Copying C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.tlb to C:\Users\schüler.EDU\AppData\Local\Microsoft\TeamsPresenceAddin
+2020-08-27 12:58:30> PresenceAddinInstaller: Copying C:\Users\schüler.EDU\AppData\Local\Microsoft\Teams\current\resources\assets\tlb\Uc.win32.tlb to C:\Users\schüler.EDU\AppData\Local\Microsoft\TeamsPresenceAddin
+2020-08-27 12:58:30> PresenceAddinInstaller: check if UC TypeLib points to current\resources\assets\tlb\Uc.tlb
+2020-08-27 12:58:30> PresenceAddinInstaller: Registering UC Typelib WIN32 under HKCU...
+2020-08-27 12:58:30> PresenceAddinInstaller: UC Typelib WIN32 successfully registered to C:\Users\schüler.EDU\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb under HKCU!
+2020-08-27 12:58:30> PresenceAddinInstaller: Registering UC Typelib WIN64 under HKCU...
+2020-08-27 12:58:30> PresenceAddinInstaller: UC Typelib WIN64 successfully registered to C:\Users\schüler.EDU\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.tlb under HKCU!
+2020-08-27 12:58:30> ApplyReleasesImpl: cleanDeadVersions: for original version of  and current version of 1.3.00.21759
+2020-08-27 12:58:30> ApplyReleasesImpl: cleanDeadVersions: exclude current folder stage
+2020-08-27 12:58:31> RegistryService: TryDeleteRegKey: HKEY_CURRENT_USER\Software\Microsoft\Office\Teams not found
